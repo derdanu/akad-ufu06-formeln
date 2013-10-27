@@ -24,7 +24,7 @@
 \usepackage{graphicx}
 \usepackage{mathcomp}
 \usepackage{polynom}
-
+\usepackage{footnote}
 
 %Abstand der Fußnoten
 \deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
@@ -81,7 +81,76 @@ Formelsammlung
 \pagestyle{plain}
 
 
-\section{Formeln}
+\section{Zweipersonen-Nullsummenspiele}
+\begin{itemize}
+\item Zeilenminimum mit Kreis
+\item Spaltenmaximum mit Quadrat
+\item Schnittpunkt ist Sattelpunkt (Gleichgewichtsstrategien)
+\end{itemize}
+
+\section{Papiercomputer}
+\subsection{Beziehungen}
+\begin{itemize}
+\item 3 = starke, überproportionale Beziehung
+\item 2 = mittlere, etwa proportionale Beziehung
+\item 1 = sehr schwache Beziehung
+\item 0 = keine Beziehung
+\end{itemize}
+
+\subsection{zentrale Größen im Problemgeflecht}
+\begin{itemize}
+\item Die Zeilensumme einer Größe gibt an, wie stark sie auf andere Größen des Netzwerks wirkt (= Aktivsumme)
+\item Die Spaltensumme dagegen lässt erkennen, wie sensibel die betreffende Größe für Veränderungen aus dem übrigen System ist (= Passivsumme)
+\end{itemize}
+
+\subsection{Schlüsselrollen}
+\begin{itemize}
+\item Aktive Größen haben eine hohe Aktivsumme, aber eine niedrige Passivsumme. Sie beeinflussen andere stark, stehen aber selbst unter geringem Einfluss durch andere (Aktive Elemente links oben)
+\item  Im Gegensatz dazu werden Größen, die eine hohe Passivsumme, aber nur eine geringe Aktivsumme haben, als reaktive Größen bezeichnet. (Reaktive Elemente rechts unten)
+\item Träge oder puffernd werden Größen genannt, die andere nur schwach beeinflussen, selbst aber auch nur gering beeinflusst werden. (Träge Elemente links unten)
+\item  Kritische Größen schließlich üben starken Einfluss auf andere aus, stehen aber selbst auch unter starkem Einfluss durch andere. (Kritische Elemente rechts oben)
+\end{itemize}
+
+\subsection{Nachteile des Papiercomputers}
+\begin{itemize}
+\item In manchen Fällen ist der paarweise Größenvergleich bei der Erstellung der Einflussmatrix der Komplexität der Problemsituation unter Umständen nicht angemessen.
+\item Durch die isolierte Betrachtung kann es zu Mehrfachzählungen von Wirkungen kommen, die das Gesamtbild verfälschen.
+\item Ferner kann die numerische, zahlenmäßige Erfassung der Zusammenhänge den beteiligten Personen eine Scheinobjektivität vorgaukeln.
+\end{itemize}
+
+\section{Netzplan}
+\subsection{Feldeinteilung}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+  $i$ & $FAZ_i$ & $FEZ_i$ \\
+\hline  
+  $d_i$ & $SAZ_i$ & $SEZ_i$ \\
+\hline
+  $GP_i$ & $FP_i$ & $UP_i$ \\
+\hline
+ \end{tabular}
+\end{table}%
+ 
+\section{Regeln}
+\begin{itemize}
+\item $i$ \footnote{Vorgangsbezeichnung} (Name oder Nummer, i) 
+\item $d_i$ \footnote{Vorgangsdauer} (Zeit)
+\item $FEZ_i = FAZ_i + d_i$ \footnote{frühester Endtermin}
+\item $FAZ_{i+1} = FEZ_i$ \footnote{frühester Anfangszeitpunkt, beim ersten Vorgang 0, bei mehreren Vorgängern der größte Wert}
+\item $SEZ_n = FEZ_n$ \footnote{späteste Endzeitpunkt beim letzten Vorgang}
+\item $SAZ_i = SEZ_i - d_i$ \footnote{späteste Anfangszeitpunkt, bei mehreren Nachfolgern der kleinste Wert}
+\item $GP_i = SEZ_i - FEZ_i$ oder $GP_i = SAZ_i – FAZ_i$ \footnote{gesamte Puffer}
+\item $FP_i = FAZ (= Nachfolger) – FEZ (= betrachteter Vorgang)$ \footnote{freie Puffer, bei mehreren Vorgängern der kleinste Wert, bei mehreren Nachfolgern der kleinste Wert}
+\item $UP_i = FAZ (= Nachfolger) – SEZ (= Vorgänger) – d_i$ \footnote{unabhängige Puffer, bei mehreren Vorgängern der größten Wert, bei mehreren Nachfolgern den kleinsten Wert}
+\item $GP_i = FP_i = UP_i = 0$ (Kritische Vörgänge -> es besteht ein kritischer Pfad)
+
+\end{itemize}
+
+
+
+
 
 
 
