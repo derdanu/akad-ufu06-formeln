@@ -81,7 +81,33 @@ Formelsammlung
 \pagestyle{plain}
 
 
-\section{Zweipersonen-Nullsummenspiele}
+\section{Entscheidungen bei Unsicherheit}
+\subsection{Entscheidungen bei Risiko}
+\subsubsection{Die Bayes-Regel}
+$ \mu = \sum\limits_{i=1}^n e_{ij} * p_j $
+\subsubsection{Das ($\mu, \sigma$)-Prinzip}
+$ \sigma_i = \sqrt{\sum\limits_{j=1}^n p_j*(e_{ij} - \mu_i)^2}$
+
+\subsection{Entscheidungen bei Unwissenheit}
+\subsubsection{Die Minimax-Regel}
+Zeilenminimum suchen und höchstes Ergebnis verwenden.
+\subsubsection{Die Maximax-Regel}
+Zeilenmaximum suchen und höchstes Ergebnis verwenden.
+\subsubsection{Die Hurwicz-Regel}
+Zeilenminimum und -maximum ermitteln. \\
+$N (Nutzen) = \lambda * Zeilenmaximum + (1 - \lambda) * Zeilenminimum $
+\subsubsection{Die Savange-Niehans-Regel}
+Regel des kleinsten Bedauerns \\ 
+\begin{itemize}
+\item Spaltenmaximum ermitteln
+\item Neue Spalte ist Spaltenmaximum minus Spalte
+\item Zeilenmaximum und das niedrigste Ergebnis verwenden.
+\end{itemize}
+\subsubsection{Die Laplace-Regel}
+Summe der Ergebnisse durch Anzahl der Umweltzustände. Das höchste Ergebnis verwenden.
+
+\subsection{Entscheidungen in Spielsituationen}
+\subsubsection{Zweipersonen-Nullsummenspiele}
 \begin{itemize}
 \item Zeilenminimum mit Kreis
 \item Spaltenmaximum mit Quadrat
