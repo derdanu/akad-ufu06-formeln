@@ -167,9 +167,9 @@ Summe der Ergebnisse durch Anzahl der Umweltzustände. Das höchste Ergebnis ver
 \item $FAZ_{i+1} = FEZ_i$ \footnote{frühester Anfangszeitpunkt, beim ersten Vorgang 0, bei mehreren Vorgängern der größte Wert}
 \item $SEZ_n = FEZ_n$ \footnote{späteste Endzeitpunkt beim letzten Vorgang}
 \item $SAZ_i = SEZ_i - d_i$ \footnote{späteste Anfangszeitpunkt, bei mehreren Nachfolgern der kleinste Wert}
-\item $GP_i = SEZ_i - FEZ_i$ oder $GP_i = SAZ_i – FAZ_i$ \footnote{gesamte Puffer}
-\item $FP_i = FAZ (= Nachfolger) – FEZ (= betrachteter Vorgang)$ \footnote{freie Puffer, bei mehreren Vorgängern der kleinste Wert, bei mehreren Nachfolgern der kleinste Wert}
-\item $UP_i = FAZ (= Nachfolger) – SEZ (= Vorgänger) – d_i$ \footnote{unabhängige Puffer, bei mehreren Vorgängern der größten Wert, bei mehreren Nachfolgern den kleinsten Wert}
+\item $GP_i = SEZ_i - FEZ_i$ oder $GP_i = SAZ_i - FAZ_i$ \footnote{gesamte Puffer}
+\item $FP_i = FAZ (= Nachfolger) - FEZ (= betrachteter Vorgang)$ \footnote{freie Puffer, bei mehreren Vorgängern der kleinste Wert, bei mehreren Nachfolgern der kleinste Wert}
+\item $UP_i = FAZ (= Nachfolger) - SEZ (= Vorg"anger) - d_i$ \footnote{unabhängige Puffer, bei mehreren Vorgängern der größten Wert, bei mehreren Nachfolgern den kleinsten Wert}
 \item $GP_i = FP_i = UP_i = 0$ (Kritische Vörgänge -> es besteht ein kritischer Pfad)
 
 \end{itemize}
